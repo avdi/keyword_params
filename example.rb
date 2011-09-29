@@ -46,7 +46,7 @@ explain4 the: "donkey", :says => "hee-haw" # => "the donkey says hee-haw"
 
 # Once we've written all this parameter-munging machinery, we then
 # repeat it in the method's documentation. (Assuming we document it at
-# all)
+# all). This seems a bit un-DRY.
 
 # Let's see if we can improve on the situation.
 
