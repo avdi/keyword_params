@@ -7,7 +7,7 @@ EXAMPLE_FILE = File.expand_path("example.rb", File.dirname(__FILE__))
 Bundler::GemHelper.install_tasks
 
 task "load_path" do
-  $LOAD_PATH.unshift(File.expand_path("lib", File.dirname(__FILE__)))
+  $LOAD_PATH.unshift(LIB_PATH)
 end
 
 desc "Run the tests"
