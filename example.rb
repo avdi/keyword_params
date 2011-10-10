@@ -68,6 +68,7 @@ b.explain "horse", "neigh"                  # => "the horse says neigh"
 b.explain "duck", says: "quack"             # => "the duck says quack"
 b.explain the: "donkey", :says => "hee-haw" # => "the donkey says hee-haw"
 b.explain the: "cat"                        # => "the cat says moo"
+b.explain 'meow', the: "cat"                # => "the cat says meow"
 b.explain                                   # => "the cow says moo"
 
 # Improvement? Well, I'll leave that for you to judge. Certainly

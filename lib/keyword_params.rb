@@ -9,9 +9,11 @@ module KeywordParams
       @keywords << OpenStruct.new(name: name, default_block: default_block)
     end
     
-    def values(options={})
+    def values(options={}, args=[])
       @keywords.map {|keyword|
-        options.fetch(keyword.name, &keyword.default_block)
+        options.fetch(keyword.name) {
+          args.empty? ? keyword.default_block.call : args.shift
+        }
       }
     end
   end
@@ -30,7 +32,7 @@ module KeywordParams
     @keyword_list = nil
     define_method(name) do |*args|
       options = args.last.is_a?(Hash) ? args.pop : {}
-      keyword_args = keyword_list.values(options)
+      keyword_args = keyword_list.values(options, args)
       # We only need keyword arg values for as many positional args
       # as are NOT supplied.
       needed_keyword_args = keyword_args[(args.size..-1)]
