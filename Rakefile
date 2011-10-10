@@ -2,7 +2,7 @@ require 'English'
 require 'bundler'
 
 LIB_PATH     = File.expand_path("lib", File.dirname(__FILE__))
-EXAMPLE_FILE = File.expand_path("example.rb", File.dirname(__FILE__))
+EXAMPLE_FILE = File.expand_path("README.rb", File.dirname(__FILE__))
 
 Bundler::GemHelper.install_tasks
 

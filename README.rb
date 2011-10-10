@@ -1,3 +1,6 @@
+# Note: this file is also the library test suite. Run `rake test` to
+# verify the code is passing.
+
 # Ruby doesn't have keyword arguments, but it fakes them pretty well.
 
 def explain(options={})
