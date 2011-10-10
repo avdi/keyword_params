@@ -1,3 +1,5 @@
+# -*- mode: ruby -*-
+
 # Note: this file is also the library test suite. Run `rake test` to
 # verify the code is passing.
 
